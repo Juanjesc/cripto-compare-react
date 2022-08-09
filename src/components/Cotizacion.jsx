@@ -26,8 +26,10 @@ const PrecioP = styled.p`
     text-transform: uppercase;
     font-family: 'Lato', sans-serif;
     font-weight: bold;
-    text-decoration: underline;
-    text-underline-offset: 10px;
+    @media (min-width: 768px) { 
+        text-decoration: underline;
+        text-underline-offset: 10px;
+    }
     
 `
 const InfoParrafo = styled.p`
@@ -44,8 +46,6 @@ const SpanInfo = styled.span`
 const ImgCripto = styled.img`
     max-width: 100%;
     width: 100px;
-    animation:jello-horizontal 1.3s reverse; 
-    @keyframes jello-horizontal{0%{transform:scale3d(1,1,1)}30%{transform:scale3d(1.25,.75,1)}40%{transform:scale3d(.75,1.25,1)}50%{transform:scale3d(1.15,.85,1)}65%{transform:scale3d(.95,1.05,1)}75%{transform:scale3d(1.05,.95,1)}100%{transform:scale3d(1,1,1)}}
 `
 const Cotizacion = ({ monedas, cotizacion }) => {
 
